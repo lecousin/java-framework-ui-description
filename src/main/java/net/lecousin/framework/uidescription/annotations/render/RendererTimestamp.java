@@ -1,4 +1,4 @@
-package net.lecousin.framework.ui_description.annotations.render;
+package net.lecousin.framework.uidescription.annotations.render;
 
 import java.lang.reflect.Field;
 import java.text.DateFormat;
@@ -9,6 +9,7 @@ import net.lecousin.framework.application.LCCore;
 import net.lecousin.framework.locale.FixedLocalizedString;
 import net.lecousin.framework.locale.ILocalizableString;
 
+/** Render a timestamp, date or calendar. */
 public class RendererTimestamp implements Renderer {
 
 	@Override
@@ -27,7 +28,8 @@ public class RendererTimestamp implements Renderer {
 				else if (value instanceof Number)
 					date = new Date(((Number)value).longValue());
 				if (date != null)
-					s = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.LONG, LCCore.getApplication().getLocale()).format(date);
+					s = DateFormat.getDateTimeInstance(
+						DateFormat.SHORT, DateFormat.LONG, LCCore.getApplication().getLocale()).format(date);
 				else
 					s = "";
 			}

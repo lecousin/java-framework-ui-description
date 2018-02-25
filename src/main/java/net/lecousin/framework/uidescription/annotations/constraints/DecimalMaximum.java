@@ -1,14 +1,16 @@
-package net.lecousin.framework.ui_description.annotations.name;
+package net.lecousin.framework.uidescription.annotations.constraints;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/** Maximum value. */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface FixedName {
+public @interface DecimalMaximum {
 
-	String value();
+	/** Maximum value. */
+	public double value();
 	
 }

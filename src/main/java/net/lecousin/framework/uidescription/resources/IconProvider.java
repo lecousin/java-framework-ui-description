@@ -1,10 +1,14 @@
-package net.lecousin.framework.ui_description.resources;
+package net.lecousin.framework.uidescription.resources;
 
+/** Provides path to the icon for a given size. */
 public interface IconProvider {
 
+	/** Provides path to the icon for a given size. */
 	public String getIcon(int size);
 	
+	/** Provides path to the icon for a given size, from a predefined path. */
 	public static class FromPath implements IconProvider {
+		/** Constructor. */
 		public FromPath(String prefix, String suffix, int... available) {
 			this.prefix = prefix;
 			this.suffix = suffix;

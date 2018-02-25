@@ -1,4 +1,4 @@
-package net.lecousin.framework.ui_description.annotations.render;
+package net.lecousin.framework.uidescription.annotations.render;
 
 import java.lang.reflect.Field;
 
@@ -6,6 +6,7 @@ import net.lecousin.framework.locale.FixedLocalizedString;
 import net.lecousin.framework.locale.ILocalizableString;
 import net.lecousin.framework.util.StringUtil;
 
+/** Render as a size. */
 public class RendererSize implements Renderer {
 
 	@Override
@@ -19,7 +20,9 @@ public class RendererSize implements Renderer {
 				if (n != null)
 					s = StringUtil.size(n);
 			}
-		} catch (Throwable t) {}
+		} catch (Throwable t) {
+			// ignore
+		}
 		return new FixedLocalizedString(s);
 	}
 	

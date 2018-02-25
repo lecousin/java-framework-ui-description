@@ -1,11 +1,16 @@
-package net.lecousin.framework.ui_description.annotations.constraints;
+package net.lecousin.framework.uidescription.annotations.constraints;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/** Minimum value. */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Required {
+public @interface DecimalMinimum {
+
+	/** Minimum value. */
+	public double value();
+	
 }
