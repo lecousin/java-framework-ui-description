@@ -1,11 +1,11 @@
 package net.lecousin.framework.uidescription.annotations.render;
 
-import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 import net.lecousin.framework.application.LCCore;
+import net.lecousin.framework.io.serialization.TypeDefinition;
 import net.lecousin.framework.locale.FixedLocalizedString;
 import net.lecousin.framework.locale.ILocalizableString;
 
@@ -13,10 +13,9 @@ import net.lecousin.framework.locale.ILocalizableString;
 public class RendererTimestamp implements Renderer {
 
 	@Override
-	public ILocalizableString toDisplayString(Object instance, Field field) {
+	public ILocalizableString toDisplayString(TypeDefinition type, Object value) {
 		String s;
 		try {
-			Object value = field.get(instance);
 			if (value == null)
 				s = "";
 			else {

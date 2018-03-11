@@ -1,19 +1,16 @@
-package net.lecousin.framework.uidescription.annotations.name;
+package net.lecousin.framework.uidescription.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/** Localized name. */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
-public @interface LocalizedName {
+public @interface Category {
 
-	/** Locale namespace. */
-	String namespace();
-
-	/** Locale key. */
-	String key();
+	String fixedName() default "";
+	String localeNamespace() default "";
+	String localeKey() default "";
 	
 }

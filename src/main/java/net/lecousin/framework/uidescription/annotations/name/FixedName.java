@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /** Fixed name (not localized(. */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface FixedName {
 
 	/** name. */

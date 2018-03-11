@@ -9,7 +9,7 @@ import net.lecousin.framework.geometry.HorizontalAlignment;
 
 /** Horizontal text alignment. */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface TextAlign {
 
 	/** Horizontal text alignment. */
