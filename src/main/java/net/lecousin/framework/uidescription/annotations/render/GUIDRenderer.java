@@ -10,7 +10,7 @@ public class GUIDRenderer implements Renderer {
 	@Override
 	public ILocalizableString toDisplayString(TypeDefinition type, Object value) {
 		try {
-			return new FixedLocalizedString(GUIDUtil.GUIDToString((byte[])value));
+			return new FixedLocalizedString(GUIDUtil.toString((byte[])value));
 		} catch (Throwable t) {
 			return new FixedLocalizedString("");
 		}
